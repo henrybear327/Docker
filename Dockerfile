@@ -12,7 +12,7 @@ COPY .vimrc /home/ubuntu/.vimrc
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y locales sudo openssh-server vim apt-utils git wget curl strace ltrace\
-                        build-essential screen man gdb valgrind acl \
+                        build-essential screen man gdb valgrind acl htop\
                         astyle clang-format
 RUN mkdir /var/run/sshd
 
