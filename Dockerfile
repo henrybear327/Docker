@@ -13,7 +13,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y locales sudo openssh-server vim apt-utils git wget curl strace ltrace\
                         build-essential screen man gdb valgrind acl htop\
-                        astyle clang-format
+                        astyle clang-format manpages-posix manpages-posix-dev
 RUN mkdir /var/run/sshd
 
 # Set locale to Traditional Chinese
