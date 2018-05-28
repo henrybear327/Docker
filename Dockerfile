@@ -1,5 +1,8 @@
 FROM ubuntu:bionic
 
+# silent debconf warnings
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Setup user ubuntu, with password ubuntu
 RUN adduser --disabled-password --gecos "" ubuntu
 RUN echo "ubuntu:ubuntu" | chpasswd

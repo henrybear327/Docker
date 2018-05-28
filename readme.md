@@ -26,7 +26,7 @@
     * `docker restart [ps ID]`
 * run
     * `docker run -p22222:22 -dt [image ID]`
-    * `docker run -p22222:22 -dt [image ID]`
+        * `ssh ubuntu@localhost -p 22222`, with password `ubuntu`
     * `docker run -p22222:22 -v [absolute path] -dt [image ID]`
     * [ref 1](http://blog.johngoulah.com/2016/03/running-strace-in-docker/)
     * [ref 2](https://docs.docker.com/engine/reference/run/)
