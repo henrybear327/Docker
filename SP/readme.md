@@ -3,7 +3,7 @@
 ## Build
 
 * Build from `stdin`
-    * `docker build -t="ubuntu1804" --rm  - < Dockerfile`
+    * `docker build -t="sp_zsh" --rm  - < Dockerfile`
         * **NOTICE**: `COPY` and `ADD` command won't work
     * `docker build -t="sp_zsh" --no-cache --rm  - < Dockerfile`
         * http://mmbash.de/blog/failed-fetch-with-docker-build-and-apt-get-update/
