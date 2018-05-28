@@ -11,7 +11,8 @@ COPY .vimrc /home/ubuntu/.vimrc
 # Update and install software packages for SP
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y locales sudo openssh-server apt-utils wget curl screen man htop
+RUN apt-get install -y apt-utils man 
+RUN apt-get install -y locales sudo openssh-server wget curl screen htop
 RUN apt-get install -y vim git build-essential gdb valgrind astyle clang-format
 RUN mkdir /var/run/sshd
 
@@ -31,8 +32,8 @@ RUN echo "export LC_ALL=zh_TW.UTF-8" >> /home/ubuntu/.zshrc
 RUN echo "export LANG=zh_TW.UTF-8" >> /home/ubuntu/.zshrc
 RUN echo "export LANGUAGE=zh_TW.UTF-8" >> /home/ubuntu/.zshrc
 
-RUN apt autoremove
-RUN apt clean
+RUN apt-get autoremove
+RUN apt-get clean
 
 # Expose SSH port
 EXPOSE 22
